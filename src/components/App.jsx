@@ -39,12 +39,10 @@ const App = () => {
     ]);
   };
 
-  //Изменяет значение фильтра.
   const changeFilter = event => {
     setFilter(event.target.value.trim());
   };
 
-  // Получение отфильтрованных контактов.
   const getVisibleContacts = () => {
     const normalizedFilter = filter.toLowerCase();
 
@@ -53,7 +51,6 @@ const App = () => {
     );
   };
 
-  // Удаление контакта из списка.
   const removeContact = contactId => {
     setContacts(prevContacts =>
       prevContacts.filter(contact => contact.id !== contactId)
